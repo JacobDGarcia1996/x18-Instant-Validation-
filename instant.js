@@ -2,7 +2,7 @@ function register(){
   //Grab the user's input and store in variables
   var userEntered = document.getElementById("user").oninput=validateUsername();
   var passEntered = document.getElementById("pass").oninput=validatePassword();
-  
+}
 function ValidateUsername(){
 
   if (userEntered.length>=6)
@@ -12,7 +12,7 @@ function ValidateUsername(){
   document.getElementById("usernameError").classList.add("shown-message");
   //Turn the username items red
   document.getElementById("usernameGroup").classList.add("has-success");
-document.getElementById("userEntered").classList.remove("has-error");
+document.getElementById("usernameGroup").classList.remove("has-error");
 }
 
 else
@@ -22,7 +22,7 @@ else
   document.getElementById("usernameError").classList.add("shown-message");
   //Turn the username items red
   document.getElementById("usernameGroup").classList.add("has-error")
-  document.getElementById("userEntered").classList.remove("has-success");
+  document.getElementById("usernameGroup").classList.remove("has-success");
 }
 }
 
@@ -34,7 +34,7 @@ function ValidatePassword () {
     document.getElementById("passwordError").classList.add("shown-message");
     //Turn the password items red
     document.getElementById("passwordGroup").classList.add("has-error")
-    document.getElementById("passEntered").classList.remove("has-success");
+    document.getElementById("passwordGroup").classList.remove("has-success");
   }
 
   else
@@ -44,7 +44,7 @@ function ValidatePassword () {
   document.getElementById("passwordError").classList.add("shown-message");
   //Turn the password items red
   document.getElementById("passwordGroup").classList.add("has-success")
-  document.getElementById("passEntered").classList.remove("has-error");
+  document.getElementById("passwordGroup").classList.remove("has-error");
   }
 }
 
