@@ -1,34 +1,54 @@
-function validate(){
-  //Grab the user's input and store in variables
-  var userEntered = document.getElementById("user").value;
-  var passEntered = document.getElementById("pass").value;
-
-if (userEntered.length>=6){
-  document.getElementById("usernameError").innerHTML="Username Acceptable.";
-  document.getElementById("usernameError").classList.remove("hidden-message");
-  document.getElementById("usernameError").classList.add("shown-message");
-  //Turn the username items red
-  document.getElementById("usernameGroup").classList.add("has-success");}
-
-else {//Show message that there is an error with the username...
-  document.getElementById("usernameError").innerHTML="Bad username.";
-  document.getElementById("usernameError").classList.remove("hidden-message");
-  document.getElementById("usernameError").classList.add("shown-message");
-  //Turn the username items red
-  document.getElementById("usernameGroup").classList.add("has-error");
-}
-if (passEntered =="password"){//Show message that there is an error with the password...
-  document.getElementById("passwordError").innerHTML="Bad password.";
-  document.getElementById("passwordError").classList.remove("hidden-message");
-  document.getElementById("passwordError").classList.add("shown-message");
-  //Turn the password items red
-  document.getElementById("passwordGroup").classList.add("has-error");
-}
-else {
-document.getElementById("passwordError").innerHTML="Password Approved.";
-document.getElementById("passwordError").classList.remove("hidden-message");
-document.getElementById("passwordError").classList.add("shown-message");
-//Turn the password items red
-document.getElementById("passwordGroup").classList.add("has-success");
-}
-}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- BOOTSTRAP (style only)-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="form.css" />
+    <title>Registration Form</title>
+    <script type="text/javascript" src="form-validation.js"></script>
+  </head>
+  <body lang="en-US">
+    <div class="container-fluid">
+      <form class="form-horizontal">
+        <div class="row">
+          <div class="col-sm-offset-2">
+            <h1>Create your account</small></h1>
+          </div>
+        </div> <!-- end heading row /-->
+        <div class="row myinput-row">
+          <div class="form-group" id="usernameGroup">
+            <label for="username" class="col-sm-2 control-label">Username</label>
+            <div class="col-sm-2">
+              <input type="text" id="user" class="form-control input-md"
+                  placeholder="myusername" />
+              <span id="usernameError" class="control-label hidden-message">
+                Error Placeholder (hidden)
+              </span>
+            </div>
+          </div>
+        </div> <!-- end username row /-->
+        <div class="row">
+          <div class="form-group" id="passwordGroup">
+            <label for="username" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-2">
+              <input type="password" id="pass" class="form-control input-md"
+                  placeholder="mypassword" />
+              <span id="passwordError" class="control-label hidden-message">
+                Error Placeholder (hidden)
+              </span>
+            </div>
+          </div>
+        </div> <!-- end username row /-->
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="button" class="btn btn-primary col-sm-1"
+              onclick="register();"> <!-- Run JavaScript to validate input /-->
+              Register
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
