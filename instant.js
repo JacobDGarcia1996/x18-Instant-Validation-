@@ -4,6 +4,8 @@ function register(){
   var passEntered = document.getElementById("pass").value;
 }
 function validateUsername(){
+  var userEntered= document.getElementById("user").value;
+
   if (userEntered.length>=5){
     document.getElementById("usernameError").innerHTML="Username Acceptable.";
     document.getElementById("usernameError").classList.remove("hidden-message");
@@ -20,6 +22,11 @@ function validateUsername(){
     document.getElementById("usernameGroup").classList.remove("has-success");
     document.getElementById("usernameGroup").classList.add("has-error");
   }
+}
+function validatePassword(){
+  var passEntered = document.getElementById("pass").value;
+  var userEntered= document.getElementById("user").value;
+
   if (passEntered.toLowerCase()=="password"){
     //Show message that there is an error with the password...
     document.getElementById("passwordError").innerHTML="Bad password.";
@@ -37,8 +44,6 @@ function validateUsername(){
   document.getElementById("passwordGroup").classList.remove("has-error");
   document.getElementById("passwordGroup").classList.add("has-success");
   }
-}
-function validatePassword(){
   if (passEntered.length<=0){
     document.getElementById("passwordError").innerHTML="Bad password.";
     document.getElementById("passwordError").classList.remove("hidden-message");
