@@ -25,7 +25,7 @@ function validateUsername(){
 }
 function validatePassword(){
   var passEntered = document.getElementById("pass").value;
-  var userEntered= document.getElementById("user").value;
+  var userEntered= document.getElementById("user")
 
   if (passEntered.toLowerCase()=="password"){
     //Show message that there is an error with the password...
