@@ -5,7 +5,7 @@ function register(){
 }
 function validateUsername(){
   var userEntered= document.getElementById("user").value;
-
+  var userEntered= document.getElementById("user").value;
   if (userEntered.length>=5){
     document.getElementById("usernameError").innerHTML="Username Acceptable.";
     document.getElementById("usernameError").classList.remove("hidden-message");
@@ -25,7 +25,7 @@ function validateUsername(){
 }
 function validatePassword(){
   var passEntered = document.getElementById("pass").value;
-  var userEntered= document.getElementById("user")
+  var userEntered= document.getElementById("user").value
 
   if (passEntered.toLowerCase()=="password"){
     //Show message that there is an error with the password...
@@ -36,15 +36,7 @@ function validatePassword(){
     document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
-  else {
-  document.getElementById("passwordError").innerHTML="Password Approved.";
-  document.getElementById("passwordError").classList.remove("hidden-message");
-  document.getElementById("passwordError").classList.add("shown-message");
-  //Turn the password items red
-  document.getElementById("passwordGroup").classList.remove("has-error");
-  document.getElementById("passwordGroup").classList.add("has-success");
-  }
-  if (passEntered.length<=0){
+  else if (passEntered.length<=0){
     document.getElementById("passwordError").innerHTML="Bad password.";
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
@@ -52,15 +44,7 @@ function validatePassword(){
     document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
-  else {
-  document.getElementById("passwordError").innerHTML="Password Approved.";
-  document.getElementById("passwordError").classList.remove("hidden-message");
-  document.getElementById("passwordError").classList.add("shown-message");
-  //Turn the password items red
-  document.getElementById("passwordGroup").classList.remove("has-error");
-  document.getElementById("passwordGroup").classList.add("has-success");
-  }
-  if (passEntered.length>=10){
+  else if (passEntered.length>=10){
     document.getElementById("passwordError").innerHTML="Bad password.";
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
@@ -68,15 +52,7 @@ function validatePassword(){
     document.getElementById("passwordGroup").classList.remove("has-success");
     document.getElementById("passwordGroup").classList.add("has-error");
   }
-  else {
-  document.getElementById("passwordError").innerHTML="Password Approved.";
-  document.getElementById("passwordError").classList.remove("hidden-message");
-  document.getElementById("passwordError").classList.add("shown-message");
-  //Turn the password items red
-  document.getElementById("passwordGroup").classList.remove("has-error");
-  document.getElementById("passwordGroup").classList.add("has-success");
-  }
-  if (passEntered==userEntered){
+  else if (passEntered==userEntered){
     document.getElementById("passwordError").innerHTML="Bad password.";
     document.getElementById("passwordError").classList.remove("hidden-message");
     document.getElementById("passwordError").classList.add("shown-message");
